@@ -12,7 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payment_platforms', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('name', 50);
+            $table->string('image');
             $table->timestamps();
         });
     }
